@@ -1,0 +1,6 @@
+{
+  "name": "Raqamli Olam",
+  "description": "O‘zbekiston maktablarining 1–11-sinf o‘quvchilari uchun zamonaviy informatika ta’lim platformasi",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,1192 @@
+# MASTER PROMPT: RAQAMLI OLAM — O‘ZBEKISTON MAKTABLARI UCHUN ZAMONAVIY INFORMATIKA TA’LIM PLATFORMASI
+
+## 1. SENING ROLING VA ASOSIY VAZIFANG
+
+Sen senior full-stack dasturchi, software architect, UX/UI dizayner, ta’lim metodisti, informatika o‘qituvchisi, cybersecurity mutaxassisi va test muhandisi sifatida ishlaysan.
+
+Menga **RAQAMLI OLAM** nomli, O‘zbekiston Respublikasi umumiy o‘rta ta’lim maktablarining 1–11-sinf o‘quvchilari uchun mo‘ljallangan, professional darajadagi, haqiqiy ishlaydigan, kengaytirishga qulay va production-ready ta’lim web-platformasini yarat.
+
+Bu oddiy landing page, dizayn maketi yoki statik demo emas. Bu real sahifalari, ishlaydigan tugmalari, ma’lumotlar modeli, ta’limiy kontenti, interaktiv topshiriqlari, foydalanuvchi rollari, test tizimi va admin paneli bo‘lgan to‘liq web-ilova bo‘lishi kerak.
+
+Asosiy maqsadlar:
+- Informatika fanini 1–11-sinflar kesimida tizimli o‘rganish.
+- O‘zbekiston maktablaridagi nazariy bilim va amaliy ko‘nikmalar o‘rtasidagi uzilishni kamaytirish.
+- Kompyuter yetarli bo‘lmagan maktablarda ham foydalanish imkoniyatini yaratish.
+- O‘quvchilarning yoshiga mos, sodda va qiziqarli ta’lim tajribasini taqdim etish.
+- O‘qituvchiga darsni rejalashtirish, tushuntirish, mashq bajartirish va bilimni baholashda yordam berish.
+- Raqamli savodxonlik, algoritmik fikrlash, dasturlash, media savodxonlik va xavfsiz internetdan foydalanish ko‘nikmalarini rivojlantirish.
+- O‘quvchilarning mustaqil ta’lim olishini rag‘batlantirish.
+
+Loyiha nomi: RAQAMLI OLAM
+
+Asosiy shior: “Bilimdan — raqamli kelajak sari!”
+
+Asosiy til: o‘zbek lotin yozuvi.
+
+Qo‘shimcha tillar:
+1. O‘zbek kirill yozuvi.
+2. Rus tili.
+3. Ingliz tili.
+
+Muhim: o‘zbek lotin, o‘zbek kirill, rus va ingliz tillarini to‘rtta alohida locale sifatida to‘liq qo‘llab-quvvatla. Interfeysdagi matnlarni avtomatik transliteratsiya bilan cheklama. Har bir til uchun to‘g‘ri tarjima, imlo va terminologiyani ta’minla.
+
+## 2. O‘ZBEKISTON TA’LIM TIZIMIGA MOSLASH
+
+Platforma O‘zbekistonning umumiy o‘rta ta’lim tizimi, o‘quvchilarning yosh xususiyatlari, maktablardagi texnik imkoniyatlar va amaliy ehtiyojlarga mos bo‘lsin.
+
+Barcha sinflar uchun kontentni yaratishdan oldin quyidagi yo‘nalishlarni tahlil qil:
+
+- Informatika va axborot texnologiyalari fanining amaldagi davlat ta’lim standartlari.
+- Amaldagi milliy o‘quv dasturlari va tegishli sinflar uchun o‘quv maqsadlari.
+- Vakolatli davlat organlari tasdiqlagan darsliklar va metodik tavsiyalar.
+- Axborot-kommunikatsiya texnologiyalari bo‘yicha amaliy kompetensiyalar.
+- O‘quvchilarning raqamli xavfsizligi, shaxsiy ma’lumotlarini himoya qilish va internet etikasi.
+- O‘zbekiston sharoitida mavjud kompyuterlar, smartfonlar, brauzerlar va internet tezligidagi farqlar.
+
+Rasmiy manbalarni imkon qadar birlamchi manbalardan tekshir: vakolatli davlat ta’lim organlari, rasmiy o‘quv dasturlari, tasdiqlangan darsliklar va tegishli normativ hujjatlar.
+
+Hech qanday o‘quv dasturi, qonun, taqiq, darslik nashri yoki rasmiy talabni o‘zingdan to‘qib chiqarma.
+
+Rasmiy tasdiqlangan ma’lumot va metodik tavsiyani aniq farqla. Ma’lumotning manbasi, nomi, nashr yili, tegishli sinf va tekshirilgan sanasini saqlash imkonini yarat.
+
+Agar amaldagi rasmiy hujjatni tekshirish imkoni bo‘lmasa, uni tasdiqlangan deb ko‘rsatma. Kontentga “Metodik tavsiya” yoki “Rasmiy manba bilan tekshirilishi kerak” belgisi qo‘yilsin.
+
+O‘quv dasturi yangilanganda administrator kontentni kodni o‘zgartirmasdan yangilay olsin.
+
+## 3. ASOSIY TEXNOLOGIK ARXITEKTURA
+
+Zamonaviy, barqaror va GitHub orqali boshqarish hamda Vercel’da deploy qilish uchun mos arxitekturani tanla.
+
+Tavsiya etilgan texnologiyalar:
+
+Frontend:
+- React.
+- TypeScript.
+- Vite.
+- Tailwind CSS.
+- Zarur joylarda accessible UI komponentlari.
+- Lucide React ikonkalari.
+- React Router.
+- React Hook Form va Zod yoki shu vazifani bajaruvchi yengil, mos kutubxonalar.
+- Zarur bo‘lganda grafik va diagrammalar uchun mos kutubxona.
+
+Backend:
+- TypeScript asosidagi Node.js API yoki Vercel Functions.
+- Firebase Authentication.
+- Cloud Firestore.
+- Gemini API faqat server tomonidagi xavfsiz integratsiya orqali.
+- Zod bilan server so‘rovlarini tekshirish.
+- Xatolarni markazlashtirilgan boshqarish.
+- Zarur joylarda rate limiting va so‘rovlarni himoyalash.
+
+Deploy:
+- GitHub repository.
+- Vercel hosting.
+- Zarur Firebase xizmatlari.
+- Muhit o‘zgaruvchilari uchun `.env.example`.
+- Production build va deploy bo‘yicha README.
+
+Muhim arxitektura qoidasi:
+
+Google AI Studio muhiti va Vercel bir xil server muhitiga ega bo‘lmasligi mumkin. Shu sababli loyihani platformaga qattiq bog‘lab qo‘yma. Frontend, API, autentifikatsiya va ma’lumotlar bazasi o‘rtasidagi bog‘lanishni aniq ajrat.
+
+Agar tanlangan stack AI Studio muhitida qo‘shimcha konfiguratsiyani talab qilsa, buni hujjatlashtir va Vercel uchun mos variantni yarat.
+
+Firebase konfiguratsiyasi, Gemini API kaliti va boshqa maxfiy qiymatlar kodga yozilmasin. Ular environment variables yoki tegishli secrets manager orqali boshqarilsin.
+
+Hech qachon API kalitlarini frontend bundle, HTML, ommaviy JSON yoki GitHub repository ichiga joylashtirma.
+
+## 4. DIZAYN VA BREND IDENTITETI
+
+Dizayn minimalistik, premium sifatli, zamonaviy va bolalarni o‘ziga jalb qiladigan bo‘lsin.
+
+Asosiy vizual yo‘nalish:
+- Clean UI.
+- Oq va och kulrang asos.
+- To‘q ko‘k, moviy va turkuaz ranglar.
+- Kam miqdordagi binafsha yoki sariq aksentlar.
+- Yengil soyalar.
+- Nozik borderlar.
+- Yetarli bo‘sh joy.
+- O‘qilishi oson shriftlar.
+- Soddalashtirilgan, kichik va bir xil uslubdagi ikonlar.
+- Tartibli kartalar.
+- Ortiqcha gradientlar, bezaklar va animatsiyalardan qochish.
+
+Ranglar uchun CSS variables yoki design tokens yarat.
+
+Yorug‘ rejim va tungi rejim to‘liq ishlasin. Tanlangan rejim sahifalar orasida saqlansin.
+
+Dizayn barcha ekranlarda ishlasin:
+- Mobil telefon.
+- Planshet.
+- Noutbuk.
+- Katta monitor.
+- Interaktiv doska.
+
+Mobil qurilmada asosiy navigatsiya qulay, tugmalar bosishga mos, matnlar o‘qilishi oson bo‘lsin.
+
+Interfeys o‘zbek tilida tabiiy, professional va imlo xatolarisiz bo‘lsin.
+
+Har bir tugma, menyu, forma va havola haqiqiy vazifani bajarsin. Ishlamaydigan dekorativ tugmalar yaratma.
+
+Yuklanish holatlari, bo‘sh holatlar, xato xabarlari, muvaffaqiyatli holatlar va tasdiqlash oynalarini loyihala.
+
+Harakatlar me’yorida bo‘lsin. `prefers-reduced-motion` sozlamasini hurmat qil.
+
+## 5. SAYTNING ASOSIY SAHIFALARI
+
+Quyidagi sahifalarni ishlab chiq:
+
+1. Bosh sahifa.
+2. Sinflar katalogi.
+3. Har bir sinfning alohida sahifasi.
+4. Fan bo‘limlari katalogi.
+5. Darslar ro‘yxati.
+6. Darsning batafsil sahifasi.
+7. Amaliy mashqlar.
+8. Interaktiv o‘yinlar.
+9. Testlar va imtihonlar.
+10. Kod yozish laboratoriyasi.
+11. Algoritmlar vizualizatori.
+12. Raqamli xavfsizlik markazi.
+13. Qiziqarli faktlar.
+14. Atamalar lug‘ati.
+15. Kasblar va IT yo‘nalishlari.
+16. O‘qituvchilar uchun resurslar.
+17. O‘quvchi profili va natijalar.
+18. O‘qituvchi kabineti.
+19. Administrator paneli.
+20. Qidiruv natijalari.
+21. Foydalanish bo‘yicha yordam.
+22. Maxfiylik siyosati.
+23. Foydalanish shartlari.
+24. 404 sahifasi.
+
+Har bir sahifada haqiqiy kontent, ishlaydigan navigatsiya va mos responsive dizayn bo‘lsin.
+
+## 6. BOSH SAHIFA
+
+Bosh sahifa quyidagi tartibda tuzilsin:
+
+A. Header:
+- RAQAMLI OLAM logotipi.
+- Bosh sahifa.
+- Sinflar.
+- Darslar.
+- O‘yinlar.
+- Testlar.
+- IT kasblari.
+- Qidiruv.
+- Til almashtirgich.
+- Yorug‘/tungi rejim.
+- Kirish yoki profil.
+
+B. Hero section:
+Sarlavha: “Raqamli kelajaging shu yerdan boshlanadi!”
+
+Tavsif: “1-sinfdan 11-sinfgacha informatika, dasturlash va zamonaviy texnologiyalarni qiziqarli darslar, amaliy mashqlar va o‘yinlar orqali o‘rgan.”
+
+Asosiy CTA: “O‘rganishni boshlash”.
+
+Ikkinchi CTA: “O‘yinlarni sinab ko‘r”.
+
+Hero qismida zamonaviy, original, bolalarga mos raqamli ta’lim illyustratsiyasi ishlat.
+
+C. Sinfni tanlash:
+1–11-sinflar uchun ko‘rkam kartalar. Har bir karta sinfga tegishli rang aksenti, qisqa tavsif va “Darslarni ko‘rish” havolasiga ega bo‘lsin.
+
+D. Tezkor bo‘limlar:
+- Bugungi dars.
+- Kun mashqi.
+- Kun testi.
+- Kun fakti.
+- Kun o‘yini.
+
+E. O‘rganish yo‘nalishlari:
+- Kompyuter savodxonligi.
+- Algoritmlar.
+- Dasturlash.
+- Internet va xavfsizlik.
+- Ofis dasturlari.
+- Ma’lumotlar bilan ishlash.
+- Sun’iy intellekt.
+- Robototexnika.
+- Multimedia.
+- Raqamli ijodkorlik.
+
+F. Ommabop darslar va o‘yinlar.
+
+G. O‘qituvchilar uchun alohida bo‘lim.
+
+H. Rivojlanish statistikasi:
+Haqiqiy ma’lumot bo‘lmasa, raqamlarni o‘ylab topma. Demo ma’lumotlarni aniq “namuna” deb belgilagin.
+
+I. Footer:
+Aloqa, platforma haqida, maxfiylik, foydalanish shartlari, til va mualliflik ma’lumotlari.
+
+## 7. 1–11-SINF UCHUN O‘QUV DASTURI
+
+Har bir sinf uchun yoshga mos, bosqichma-bosqich rivojlanadigan o‘quv yo‘nalishini yarat.
+
+Quyidagi mavzular boshlang‘ich kontent xaritasi hisoblanadi. Ularni amaldagi rasmiy o‘quv dasturi bilan taqqosla, tegishli sinfga mosligini tekshir va kerakli joyda o‘zgartir. Mavzularning ro‘yxatini rasmiy tasdiqlangan dastur deb ko‘rsatma.
+
+### 1–4-sinflar: raqamli savodxonlik va dastlabki fikrlash
+
+Tavsiya etiladigan yo‘nalishlar:
+- Kompyuter va uning asosiy qismlari.
+- Kompyuter qurilmalarining vazifalari.
+- Sichqoncha va klaviaturadan foydalanish.
+- Fayl va papkalar tushunchasi.
+- Axborot va uning ko‘rinishlari.
+- Ketma-ketlik va algoritmik fikrlash.
+- Oddiy algoritmlar va blok-sxemalar.
+- Scratch yoki mos vizual muhitda dasturlash.
+- Raqamli rasm va ijodkorlik.
+- Internet haqida dastlabki tushunchalar.
+- Shaxsiy ma’lumotlarni sir saqlash.
+- Kuchli parol tushunchasi.
+- Begonalarning xabarlariga ehtiyotkor munosabat.
+- Kompyuterdan sog‘lom va to‘g‘ri foydalanish.
+
+Taqdimot shakli:
+- Qisqa hikoyalar.
+- Rangli illyustratsiyalar.
+- Bosqichma-bosqich ko‘rsatmalar.
+- Sudrab joylashtirish mashqlari.
+- Oddiy animatsiyalar.
+- 3–5 savolli mini-testlar.
+- Oson va tushunarli o‘yinlar.
+
+### 5–6-sinflar: amaliy kompyuter ko‘nikmalari
+
+Tavsiya etiladigan yo‘nalishlar:
+- Operatsion tizim va ish stoli.
+- Fayllarni boshqarish.
+- Matn muharrirlari.
+- Elektron jadvallarga kirish.
+- Taqdimot yaratish.
+- Axborotni izlash va tekshirish.
+- Internet va brauzerlar.
+- Elektron pochta asoslari.
+- Algoritmlar va blok-sxemalar.
+- O‘zgaruvchi va shart tushunchasi.
+- Scratch yoki boshqa vizual dasturlash.
+- Mualliflik huquqi va plagiat.
+- Internet etikasi.
+- Kiberxavfsizlik asoslari.
+- Raqamli gigiyena.
+
+Amaliy topshiriqlar:
+- Hujjat tayyorlash.
+- Jadval yaratish.
+- Oddiy taqdimot tayyorlash.
+- Fayllarni tartiblash.
+- Qidiruv natijalarini solishtirish.
+- Algoritmni bloklardan yig‘ish.
+- Oddiy interaktiv loyiha yaratish.
+
+### 7–8-sinflar: algoritmlar va texnologiyalarni chuqurroq o‘rganish
+
+Tavsiya etiladigan yo‘nalishlar:
+- Axborotning raqamli ko‘rinishi.
+- Kompyuter arxitekturasi asoslari.
+- Operatsion tizimlar.
+- Tarmoqlar va internet.
+- Mantiqiy amallar.
+- O‘zgaruvchilar, shartlar va takrorlanishlar.
+- Algoritmlarni tahlil qilish.
+- Python yoki rasmiy dasturga mos dasturlash tili.
+- Funksiyalar va ma’lumotlar tuzilmalari bilan dastlabki tanishuv.
+- HTML va CSS asoslari.
+- Web-sahifa tuzilishi.
+- Ma’lumotlar bazasiga kirish.
+- Elektron jadvallarda formulalar va diagrammalar.
+- Multimedia bilan ishlash.
+- Sun’iy intellekt haqida asosiy tushunchalar.
+- Soxta axborot va media savodxonlik.
+- Raqamli xavfsizlik.
+
+Amaliy loyihalar:
+- Kalkulyator.
+- Test dasturi.
+- Shaxsiy portfolio sahifasi.
+- Oddiy veb-sayt.
+- Ma’lumotlarni jadvalda tahlil qilish.
+- Algoritmik masalalar.
+
+### 9–11-sinflar: dasturlash, muhandislik va zamonaviy IT
+
+Tavsiya etiladigan yo‘nalishlar:
+- Python dasturlash.
+- Funksiyalar, modullar va ma’lumotlar tuzilmalari.
+- Algoritmlar samaradorligi haqida boshlang‘ich tushunchalar.
+- HTML, CSS va JavaScript.
+- Web-ilova arxitekturasi.
+- HTTP va API tushunchalari.
+- Ma’lumotlar bazasi va SQL.
+- Kompyuter tarmoqlari.
+- Axborot xavfsizligi.
+- Shifrlashning asosiy tamoyillari.
+- Sun’iy intellekt va mashinaviy o‘rganish asoslari.
+- Ma’lumotlarni yig‘ish, tahlil qilish va vizualizatsiya.
+- Bulutli texnologiyalar.
+- Robototexnika va IoT asoslari.
+- Raqamli mahsulot loyihalash.
+- Dasturiy ta’minotni testlash.
+- Git va GitHub asoslari.
+- IT loyihalarini rejalashtirish.
+- Mualliflik huquqi, litsenziyalar va ochiq manbali dasturiy ta’minot.
+- Raqamli iqtisodiyot va IT kasblari.
+- Etik va mas’uliyatli sun’iy intellekt.
+
+Amaliy loyihalar:
+- Interaktiv web-sayt.
+- API bilan ishlaydigan kichik ilova.
+- Ma’lumotlar bazasiga ulangan loyiha.
+- Python yordamida ma’lumotlarni tahlil qilish.
+- Xavfsiz parolni baholash simulyatori.
+- Robototexnika uchun virtual algoritm.
+- Jamoaviy loyiha va GitHub repository.
+
+Muhim: yuqoridagi mavzularni har bir sinfga ko‘r-ko‘rona biriktirma. Sinflar kesimida o‘quv maqsadlari, mavzularning murakkabligi va zarur boshlang‘ich bilimlarni tekshir. Takrorlanishni kamaytir, bilimlar ketma-ketligini saqla va mavzularni rasmiy dasturga muvofiqlashtir.
+
+## 8. HAR BIR DARSNING STANDART TUZILISHI
+
+Har bir dars quyidagi qismlarga ega bo‘lsin:
+
+1. Dars nomi.
+2. Sinf va fan bo‘limi.
+3. Dars maqsadi.
+4. O‘quvchi dars oxirida nimalarni bajara olishi.
+5. Kerakli jihozlar va dasturlar.
+6. Avvalgi bilimlarni tekshirish.
+7. Qisqa va tushunarli ma’ruza.
+8. Real hayotdan misol.
+9. Rasm, diagramma yoki animatsiya.
+10. Bosqichma-bosqich amaliy ko‘rsatma.
+11. Mustaqil mashq.
+12. Interaktiv o‘yin yoki mini-topshiriq.
+13. Test savollari.
+14. Javoblar va izohlar.
+15. Keng tarqalgan xatolar.
+16. Uyga vazifa yoki ijodiy loyiha.
+17. O‘zini baholash.
+18. Keyingi darsga havola.
+19. Foydalanilgan manbalar.
+
+Dars matnlari yoshga mos bo‘lsin. Boshlang‘ich sinf uchun sodda gaplar, yuqori sinflar uchun texnik jihatdan aniq tushuntirishlar ishlat.
+
+Darslar juda uzun matnlardan iborat bo‘lmasin. Ma’lumotni kichik mazmuniy qismlarga ajrat.
+
+Har bir yangi atamaga sodda ta’rif va real misol ber.
+
+Murakkab mavzularni kundalik hayot bilan bog‘la.
+
+## 9. MA’RUZALAR VA O‘QUV MATERIALLARI
+
+Har bir yo‘nalish bo‘yicha qisqa ma’ruzalar kutubxonasini yarat.
+
+Yo‘nalishlar:
+- Kompyuter savodxonligi.
+- Dasturlash.
+- Algoritmlar.
+- Operatsion tizimlar.
+- Ofis dasturlari.
+- Internet.
+- Kompyuter tarmoqlari.
+- Axborot xavfsizligi.
+- Media savodxonlik.
+- Sun’iy intellekt.
+- Robototexnika.
+- Web-dasturlash.
+- Ma’lumotlar bazalari.
+- Grafik dizayn.
+- Multimedia.
+- Elektron jadvallar.
+- Raqamli huquq va etika.
+- IT kasblari.
+
+Har bir ma’ruzada:
+- Qisqa ta’rif.
+- Nima uchun kerakligi.
+- Hayotiy misol.
+- Asosiy atamalar.
+- Ko‘rgazmali tushuntirish.
+- O‘zini tekshirish uchun savol.
+- Amaliy topshiriq.
+- Qo‘shimcha manba.
+
+Manbasiz texnik faktlarni qat’iy haqiqat sifatida taqdim etma.
+
+## 10. INTERAKTIV O‘YINLAR
+
+O‘yinlar haqiqiy ishlaydigan JavaScript/React komponentlari bo‘lsin. Faqat rasm yoki bosilmaydigan maket yaratma.
+
+Quyidagi o‘yinlarni ishlab chiq:
+
+1. Kompyuter qismlarini topish:
+   Kompyuter rasmini ko‘rsat, o‘quvchi qurilma nomini tanlasin.
+
+2. Klaviatura tezligi:
+   Qisqa matnni ko‘chirib yozish, tezlik va xatolar sonini hisoblash. Natijani yoshga mos rag‘batlantirish bilan ko‘rsat.
+
+3. Algoritmni yig‘:
+   Buyruqlar bloklarini to‘g‘ri ketma-ketlikka joylashtirish.
+
+4. Robotni manzilga olib bor:
+   Robot uchun oldinga yurish, burilish va takrorlash buyruqlarini tanlash. To‘siqlarni hisobga oladigan grid simulyatsiyasi.
+
+5. Xatoni top:
+   Noto‘g‘ri algoritm yoki koddagi xatoni aniqlash.
+
+6. Scratch uslubidagi blokli mantiq:
+   Sodda buyruqlardan dastur tuzish.
+
+7. Python mini-laboratoriyasi:
+   Kodni yozish yoki tanlash, natijani ko‘rish. Kod bajariladigan bo‘lsa, xavfsiz izolyatsiyalangan muhitdan foydalan. Oddiy serverda foydalanuvchi kodini to‘g‘ridan-to‘g‘ri `eval` yoki `exec` bilan bajarish taqiqlanadi.
+
+8. HTML/CSS natijasini ko‘r:
+   Xavfsiz kod muharriri orqali oddiy web-sahifa tuzish.
+
+9. Kiberxavfsizlik detektivi:
+   Fishing xabarlari, kuchsiz parollar va shubhali havolalarni aniqlash.
+
+10. Fayllarni tartibla:
+    Fayllarni to‘g‘ri papkalarga joylashtirish.
+
+11. Axborotni sarala:
+    Fakt, fikr, reklama va shubhali axborotni farqlash.
+
+12. Raqamli xotira:
+    Kompyuter qurilmalari va vazifalarini moslashtirish.
+
+13. Tezkor mantiq:
+    Ketma-ketlik, mantiq va algoritm masalalari.
+
+14. Ma’lumotlar bazasini qur:
+    Oddiy jadval, maydon va yozuvlarni shakllantirish.
+
+15. AI bilan yoki AI haqida:
+    Sun’iy intellekt imkoniyatlari va cheklovlarini tushuntiradigan interaktiv simulyator.
+
+O‘yin mexanikasi:
+- Boshlash va qayta boshlash.
+- Ball hisoblash.
+- Bosqichlar.
+- To‘g‘ri yoki noto‘g‘ri javobga izoh.
+- Urinishlar soni.
+- Vaqt cheklovi faqat kerakli o‘yinlarda.
+- O‘quvchining natijasi.
+- Mobil qurilmada ishlash.
+- Klaviatura orqali boshqarish.
+- O‘yin yakunida o‘rgatilgan bilimlar xulosasi.
+
+Barcha o‘yinlar o‘quv maqsadiga ega bo‘lsin. Faqat ko‘ngilochar, ta’limiy qiymati yo‘q o‘yinlar bilan cheklanma.
+
+## 11. MASHQLAR VA AMALIY LABORATORIYA
+
+Har bir dars uchun kamida uch darajali topshiriqlarni qo‘llab-quvvatla:
+
+- Boshlang‘ich.
+- O‘rta.
+- Murakkab.
+
+Topshiriq turlari:
+- Bir javobli test.
+- Bir nechta javobli test.
+- To‘g‘ri/noto‘g‘ri.
+- Moslashtirish.
+- Ketma-ketlikni tartiblash.
+- Bo‘sh joyni to‘ldirish.
+- Koddagi xatoni topish.
+- Natijani oldindan aytish.
+- Kod yozish.
+- Diagramma yoki blok-sxema tuzish.
+- Fayl bilan amaliy ishlash.
+- Mustaqil loyiha.
+- Ochiq javob.
+
+Har bir mashq uchun:
+- Aniq shart.
+- Kutilgan natija.
+- Baholash mezoni.
+- Namunaviy yechim.
+- Yordamchi maslahat.
+- Keng tarqalgan xato.
+- Qiyinlik darajasi.
+
+Javob to‘g‘ri bo‘lmasa, o‘quvchini darhol jazolovchi xabar bilan qarshi olma. Xatoni tushuntir va qayta urinish imkonini ber.
+
+## 12. TEST TIZIMI
+
+Professional test modulini ishlab chiq.
+
+Talablar:
+- Sinf, mavzu va qiyinlik bo‘yicha filtrlash.
+- Savollarni aralashtirish.
+- Javob variantlarini aralashtirish.
+- Test vaqtini sozlash.
+- Natijani hisoblash.
+- Har bir savol bo‘yicha izoh.
+- To‘g‘ri javoblar tahlili.
+- Xatolar ro‘yxati.
+- Qayta topshirish.
+- O‘qituvchi uchun test yaratish.
+- Testni saqlash va tahrirlash.
+- Savollar banki.
+- Natijalar tarixi.
+- CSV eksporti.
+- Test natijalarini bosmaga tayyor ko‘rinishda chiqarish.
+
+Testni boshlashdan oldin shartlar aniq ko‘rsatilsin.
+
+Baholash mezonlarini administrator yoki o‘qituvchi sozlay olsin.
+
+Agar test rasmiy imtihon talablari asosida tuzilmagan bo‘lsa, uni rasmiy imtihon deb ko‘rsatma.
+
+Savollar bir-birini takrorlamasin, bir ma’noli va yoshga mos bo‘lsin.
+
+Savolning to‘g‘ri javobi va izohi har bir savolga alohida biriktirilsin.
+
+## 13. REAL RASMLAR VA VIZUAL MATERIALLAR
+
+Platformada quyidagi mavzularga tegishli vizual materiallar bo‘lsin:
+- Kompyuter qismlari.
+- Klaviatura va sichqoncha.
+- Printer, skaner va boshqa qurilmalar.
+- Server va ma’lumotlar markazi.
+- Robototexnika.
+- Elektron platalar va mikrokontrollerlar.
+- Kompyuter tarmoqlari.
+- Dasturlash jarayoni.
+- Sun’iy intellekt.
+- Raqamli xavfsizlik.
+- IT kasblari.
+- Zamonaviy laboratoriyalar.
+
+Real fotografiyalarni illyustratsiyalar bilan muvozanatli birlashtir.
+
+Rasmlarni imkon qadar optimallashtir, `alt` matnini yoz, o‘lchamlarini belgilab layout siljishini kamaytir va lazy loadingdan foydalan.
+
+Rasm manbasi, muallif va litsenziya ma’lumotlarini zarur joylarda saqla.
+
+Litsenziyasi noma’lum yoki ruxsatsiz olingan rasmlarni ishlatma. Mavjud bo‘lmagan rasm manbalarini to‘qib chiqarmagin.
+
+Internet bo‘lmaganda muhim tushunchalarni tushuntiradigan lokal SVG yoki CSS diagrammalaridan foydalan.
+
+## 14. QIZIQARLI FAKTLAR VA ATAMALAR LUG‘ATI
+
+“Kun fakti” modulini yarat.
+
+Har bir fakt:
+- Qisqa.
+- Qiziqarli.
+- Yoshga mos.
+- Tekshiriladigan.
+- Ishonchli manbaga ega bo‘lsin.
+
+Faktlar orasida:
+- Kompyuter tarixi.
+- Internet tarixi.
+- Dasturlash tillari.
+- Robototexnika.
+- Sun’iy intellekt.
+- Kosmik texnologiyalar.
+- Raqamli xavfsizlik.
+- O‘zbekistonning IT sohasi.
+- Mahalliy raqamli loyihalar.
+
+Noto‘g‘ri, tekshirilmagan yoki shov-shuvli ma’lumotlarni fakt sifatida ko‘rsatma.
+
+Atamalar lug‘ati o‘zbek lotin, o‘zbek kirill, rus va ingliz tillarida qidiruvni qo‘llab-quvvatlasin.
+
+Har bir atama uchun:
+- Atama.
+- Sodda ta’rif.
+- Batafsil izoh.
+- Hayotiy misol.
+- Tegishli sinf.
+- Mavzu.
+- Tegishli darsga havola.
+
+## 15. RAQAMLI XAVFSIZLIK VA TAQIQLANADIGAN XATTI-HARAKATLAR
+
+Bu bo‘lim alohida ahamiyatga ega.
+
+O‘quvchilarga quyidagilarni yoshiga mos tilda tushuntir:
+- Shaxsiy ma’lumotlarni himoya qilish.
+- Kuchli parollar va ko‘p bosqichli himoya.
+- Fishing va firibgarlik.
+- Kiberbulling.
+- Begonalarga ishonish xavfi.
+- Shubhali havolalar va fayllar.
+- Zararli dasturlar.
+- Mualliflik huquqi.
+- Plagiat.
+- Soxta axborot.
+- Raqamli iz.
+- Internetdagi hurmat va etika.
+- Sun’iy intellektdan mas’uliyatli foydalanish.
+- Ekran vaqti va raqamli salomatlik.
+
+Qonun bilan taqiqlangan yoki zararli harakatlarni rasmiy manbalar asosida tushuntir. Har qanday foydalanuvchi xatti-harakatini asossiz ravishda “qonunan taqiqlangan” deb belgilama.
+
+O‘quvchilarni quyidagilardan qaytar:
+- Birovning akkauntiga ruxsatsiz kirish.
+- Boshqalarning parollarini o‘g‘irlash.
+- Zararli dastur tarqatish.
+- Shaxsiy ma’lumotlarni ruxsatsiz tarqatish.
+- Kiberbulling va tahdid.
+- Boshqa odamning ishini o‘ziniki sifatida ko‘rsatish.
+- Ruxsatsiz tizimlarda xavfsizlik sinovlarini o‘tkazish.
+
+Kiberxavfsizlik laboratoriyalari faqat xavfsiz, oldindan tayyorlangan simulyatsiya muhitida ishlasin.
+
+Haqiqiy shaxslar yoki tizimlarga zarar yetkazishi mumkin bo‘lgan topshiriqlar o‘rniga himoyalanish, aniqlash va oldini olishga qaratilgan mashqlar yarat.
+
+O‘quvchidan ortiqcha shaxsiy ma’lumotlarni so‘rama. Ochiq profillarda to‘liq tug‘ilgan sana, uy manzili, telefon raqami va boshqa maxfiy ma’lumotlarni ko‘rsatma.
+
+## 16. IT KASBLARI VA KELAJAK YO‘NALISHLARI
+
+Alohida “IT kasblari” bo‘limini yarat.
+
+Yo‘nalishlar:
+- Frontend dasturchi.
+- Backend dasturchi.
+- Full-stack dasturchi.
+- Mobil ilovalar dasturchisi.
+- QA va test muhandisi.
+- UI/UX dizayner.
+- Data analyst.
+- Data scientist.
+- AI/ML muhandisi.
+- Kiberxavfsizlik mutaxassisi.
+- Tarmoq administratori.
+- DevOps muhandisi.
+- Robototexnika muhandisi.
+- Game developer.
+- IT loyiha menejeri.
+- Texnik yordam mutaxassisi.
+
+Har bir kasb uchun:
+- Nima ish bajarishi.
+- Qanday bilimlar kerakligi.
+- Qaysi fanlarga e’tibor berish.
+- Boshlovchi uchun o‘quv yo‘li.
+- Kichik amaliy loyiha.
+- O‘rganish uchun ishonchli manbalar.
+
+“Qaysi IT kasbi menga mos?” nomli oddiy qiziqish testi ham yarat. Natijani mutlaq xulosa emas, tavsiya sifatida ko‘rsat.
+
+## 17. O‘QITUVCHI KABINETI
+
+O‘qituvchi uchun alohida dashboard yarat.
+
+Funksiyalar:
+- Sinf yoki guruh yaratish.
+- O‘quvchilarni taklif qilish yoki xavfsiz kod orqali qo‘shish.
+- Darslarni rejalashtirish.
+- Mavzu bo‘yicha mashqlarni tanlash.
+- Test yaratish.
+- Testni guruhga biriktirish.
+- Topshiriqlarni muddat bilan berish.
+- O‘quvchilarning natijalarini ko‘rish.
+- Mavzu bo‘yicha o‘zlashtirishni tahlil qilish.
+- Ko‘p xato qilingan savollarni aniqlash.
+- Hisobotni CSV formatida yuklab olish.
+- Dars materiallarini saqlash.
+- Darsni proyektor uchun to‘liq ekran rejimida ochish.
+
+O‘quvchilarni omma oldida uyaltiradigan reytinglar yoki kamsituvchi belgilar yaratma.
+
+O‘qituvchi faqat o‘ziga tegishli guruh va ruxsat etilgan ma’lumotlarni ko‘rsin.
+
+## 18. O‘QUVCHI KABINETI VA GAMIFIKATSIYA
+
+O‘quvchi kabinetida:
+- Davom etayotgan dars.
+- Tugallangan darslar.
+- O‘zlashtirish darajasi.
+- Topshiriqlar.
+- Test natijalari.
+- Erishilgan yutuqlar.
+- Shaxsiy rivojlanish xaritasi.
+- Tavsiya etilgan keyingi mavzu.
+- Sevimli darslar.
+- Faoliyat tarixi.
+
+Gamifikatsiya:
+- Ballar.
+- Nishonlar.
+- Darajalar.
+- Ketma-ket o‘rganish kunlari.
+- Haftalik maqsadlar.
+- Shaxsiy rekordlar.
+- O‘z natijasini avvalgi natijasi bilan taqqoslash.
+
+Bolalarni ortiqcha vaqt onlayn qolishga undaydigan manipulyativ mexanikalardan foydalanma.
+
+O‘quvchining natijalari maxfiy bo‘lsin. Reytinglar yoqilsa ham, shaxsiy ma’lumotlar oshkor etilmasin.
+
+## 19. ADMINISTRATOR PANELI
+
+Admin paneli orqali dasturchisiz kontent boshqarish imkoniyati yarat.
+
+Administrator quyidagilarni bajara olsin:
+- Sinflarni boshqarish.
+- Fan bo‘limlarini boshqarish.
+- Dars yaratish, tahrirlash, nashr qilish va arxivlash.
+- Kontentni uch til va ikki o‘zbek yozuvida boshqarish.
+- Mashq va testlarni boshqarish.
+- O‘yin bosqichlarini boshqarish.
+- Rasmlar va fayllarni boshqarish.
+- Manbalarni biriktirish.
+- O‘quv dasturining versiyalarini saqlash.
+- Kontentni qoralama holatida saqlash.
+- Nashrdan oldin ko‘rib chiqish.
+- Foydalanuvchi rollarini boshqarish.
+- Xavfsizlik va tizim hodisalarini kuzatish.
+
+Kontent modeli quyidagilarni qo‘llab-quvvatlasin:
+- `draft`
+- `review`
+- `published`
+- `archived`
+
+Faqat vakolatli foydalanuvchilar nashr qilish huquqiga ega bo‘lsin.
+
+Admin panelini shunchaki ko‘rinadigan maket qilib qo‘yma. Barcha CRUD amallari real ma’lumotlar bazasi bilan ishlasin.
+
+## 20. TILLAR VA LOKALIZATSIYA
+
+Quyidagi locale kodlaridan foydalan:
+- `uz-Latn`
+- `uz-Cyrl`
+- `ru`
+- `en`
+
+Barcha interfeys matnlari tarjima fayllarida saqlansin.
+
+Tarjima qilinadigan elementlar:
+- Navigatsiya.
+- Tugmalar.
+- Formalar.
+- Xatolik xabarlari.
+- Dars matnlari.
+- Testlar.
+- O‘yinlar.
+- Lug‘at.
+- Admin paneli.
+- Metadata.
+- Maxfiylik va foydalanish shartlari.
+
+O‘zbek lotindan kirillga o‘tishda imlo va terminologiya to‘g‘ri bo‘lsin. Oddiy harf almashtirish orqali barcha tarjimalarni yaratma.
+
+Tarjima mavjud bo‘lmasa, foydalanuvchiga bo‘sh ekran ko‘rsatma. Oldindan belgilangan fallback tilidan foydalan va admin uchun tarjima yetishmayotganini bildir.
+
+Tilni almashtirganda imkon qadar foydalanuvchi ochgan dars yoki sahifa saqlansin.
+
+## 21. QIDIRUV VA FILTRLASH
+
+Global qidiruv quyidagilarni qamrab olsin:
+- Darslar.
+- Sinflar.
+- Mavzular.
+- Atamalar.
+- Mashqlar.
+- Testlar.
+- O‘yinlar.
+- Kasblar.
+
+Filtrlar:
+- Sinf.
+- Fan yo‘nalishi.
+- Qiyinlik.
+- Til.
+- Kontent turi.
+- Davomiylik.
+
+Qidiruv lotin va kirill yozuvlaridagi so‘rovlarni imkon qadar qo‘llab-quvvatlasin.
+
+Bo‘sh natijada foydalanuvchiga qidiruvni o‘zgartirish taklif qilinsin.
+
+## 22. INTERNETI SUST MAKTABLAR UCHUN OPTIMALLASHTIRISH
+
+Platforma O‘zbekiston maktablaridagi turli internet sharoitlarini hisobga olsin.
+
+Talablar:
+- Yengil frontend bundle.
+- Rasm optimallashtirish.
+- Lazy loading.
+- Keraksiz kutubxonalarni kamaytirish.
+- Keshdan oqilona foydalanish.
+- Loading skeletonlar.
+- Tarmoq xatolariga chidamlilik.
+- Offline holat uchun tushunarli xabarlar.
+- Muhim darslarni oldindan keshlash imkoniyati.
+- PWA imkoniyatlari, agar ular xavfsiz va mos amalga oshirilsa.
+
+Offline rejimda serverga bog‘liq amallar ishlamayotganini aniq ko‘rsat. Saqlanmagan javoblar yo‘qolib ketmasin.
+
+Agar foydalanuvchi tizimga kirmagan bo‘lsa, ruxsat etilgan darslar va lokal mashqlarni ishlata olsin.
+
+## 23. MAXFIYLIK VA BOLALAR XAVFSIZLIGI
+
+Platforma voyaga yetmagan foydalanuvchilar uchun mo‘ljallangan.
+
+Talablar:
+- Eng kam zarur shaxsiy ma’lumotlarni yig‘ish.
+- Xavfsiz autentifikatsiya.
+- Rolga asoslangan ruxsatlar.
+- Firestore Security Rules.
+- Serverda kiruvchi ma’lumotlarni tekshirish.
+- XSS va injection hujumlariga qarshi himoya.
+- Ochiq admin endpointlar bo‘lmasligi.
+- Maxfiy ma’lumotlarni loglarda chiqarmaslik.
+- O‘quvchi ma’lumotlariga kirishni cheklash.
+- Zarur rozilik va maxfiylik jarayonlarini qonuniy talablar asosida loyihalash.
+- Ma’lumotlarni saqlash va o‘chirish siyosatini hujjatlashtirish.
+
+Frontenddagi yashirin tugma yoki sahifa orqali admin huquqini himoyalangan deb hisoblama. Ruxsatlar backend va ma’lumotlar bazasi qoidalari orqali tekshirilsin.
+
+Serverdagi har bir muhim amal foydalanuvchi ruxsatiga qarab tekshirilsin.
+
+## 24. MA’LUMOTLAR BAZASI MODELI
+
+Firestore uchun tartibli ma’lumotlar modelini loyihala.
+
+Quyidagi kolleksiyalar yoki ularga teng mantiqiy tuzilmalardan foydalan:
+- `users`
+- `roles`
+- `classes`
+- `subjects`
+- `curriculumVersions`
+- `topics`
+- `lessons`
+- `lessonTranslations`
+- `exercises`
+- `questions`
+- `quizzes`
+- `quizAttempts`
+- `games`
+- `gameProgress`
+- `studentProgress`
+- `teacherGroups`
+- `groupMembers`
+- `assignments`
+- `assignmentSubmissions`
+- `achievements`
+- `glossaryTerms`
+- `facts`
+- `careers`
+- `sources`
+- `mediaAssets`
+- `auditLogs`
+- `platformSettings`
+
+Har bir obyekt uchun zarur identifikator, til, sinf, mavzu, holat, vaqt belgilari va tegishli bog‘lanishlarni aniqlab ber.
+
+Ma’lumotlar tuzilmasini takroriy va ortiqcha hujjatlar bilan to‘ldirma.
+
+Kerakli indekslarni hujjatlashtir.
+
+Xavfsizlik qoidalarini rollar va hujjat egaligiga mos yoz.
+
+Maxfiy ma’lumotlarni ommaviy kolleksiyalarda saqlama.
+
+## 25. SUN’IY INTELLEKT YORDAMCHISI
+
+“Raqamli ustoz” nomli yordamchi modul yarat.
+
+Uning vazifalari:
+- Mavzuni sodda tilda tushuntirish.
+- O‘quvchining sinfiga mos misol berish.
+- Koddagi xatoni tushuntirish.
+- Mashq uchun bosqichma-bosqich maslahat berish.
+- Yangi mashqlar taklif qilish.
+- Atamalarni tushuntirish.
+- O‘quvchini mustaqil fikrlashga undash.
+
+Yordamchi o‘quvchiga har doim tayyor javobni berib yubormasin. Avval yo‘naltiruvchi savol va maslahat taklif qilsin.
+
+AI yaratgan kontent rasmiy tasdiqlangan o‘quv materiali sifatida avtomatik e’lon qilinmasin. Zarur hollarda o‘qituvchi yoki administrator tekshiruvidan o‘tsin.
+
+Yordamchi zararli, haqoratli, xavfli yoki shaxsiy ma’lumotlarni so‘rashga qaratilgan javoblarni cheklasin.
+
+Gemini API kaliti faqat serverda saqlansin. API chaqiruvlariga limit, xatolarni boshqarish va foydalanish xarajatlarini nazorat qilish imkoniyatini qo‘sh.
+
+Agar API kaliti sozlanmagan bo‘lsa, saytning qolgan qismlari ishlashda davom etsin. Yordamchi o‘rnida foydalanuvchiga tushunarli xabar ko‘rsat.
+
+## 26. ACCESSIBILITY VA FOYDALANISH QULAYLIGI
+
+WCAG 2.2 AA talablariga imkon qadar moslash.
+
+- Semantik HTML.
+- Klaviatura bilan navigatsiya.
+- Ko‘rinadigan focus holati.
+- Rasmlar uchun alt matn.
+- Rang kontrastini tekshirish.
+- Formlar uchun label.
+- Ekran o‘quvchi uchun tushunarli nomlar.
+- Modal oynalarda fokusni boshqarish.
+- Rangning o‘zi bilan cheklanmaydigan xabarlar.
+- Animatsiyani kamaytirish sozlamasi.
+- Video uchun subtitr yoki matnli muqobil.
+- O‘yinlar uchun klaviatura boshqaruvi.
+- Kichik ekranlarda ham o‘qiladigan matn.
+
+## 27. SEO VA WEB STANDARTLARI
+
+Har bir ommaviy dars va mavzu uchun:
+- To‘g‘ri title.
+- Meta description.
+- Canonical URL.
+- Open Graph metadata.
+- Semantic headinglar.
+- Tushunarli URL.
+- Sitemap.
+- Robots.txt.
+- Favicon.
+- To‘g‘ri 404 sahifasi.
+
+Ommaviy sahifalar qidiruv tizimlarida indekslanishi mumkin bo‘lsin. Shaxsiy kabinetlar, admin sahifalari va maxfiy ma’lumotlar indekslanmasin.
+
+Tilga mos URL strategiyasini tanla va hujjatlashtir.
+
+## 28. LOYIHA PAPKALARI VA CLEAN CODE
+
+Kod professional, modulga ajratilgan va o‘qilishi oson bo‘lsin.
+
+Tavsiya etilgan tuzilma:
+
+`src/`
+- `app/`
+- `components/`
+- `features/`
+- `pages/`
+- `layouts/`
+- `hooks/`
+- `services/`
+- `lib/`
+- `locales/`
+- `types/`
+- `schemas/`
+- `styles/`
+- `assets/`
+
+`api/` yoki `server/`
+- `routes/`
+- `middleware/`
+- `services/`
+- `schemas/`
+- `utils/`
+
+`public/`
+- `images/`
+- `icons/`
+
+`tests/`
+- `unit/`
+- `integration/`
+- `e2e/`
+
+Loyiha tuzilmasi tanlangan framework va deploy muhitiga moslashtirilishi mumkin, ammo frontend, backend, biznes mantiq va ma’lumotlar qatlamini aralashtirma.
+
+Talablar:
+- TypeScript strict mode.
+- `any` dan asossiz foydalanmaslik.
+- Qayta foydalaniladigan komponentlar.
+- Aniq nomlangan funksiyalar.
+- Kichik va mas’uliyati aniq modullar.
+- Markazlashtirilgan konfiguratsiya.
+- Bir xil formatlash qoidalari.
+- ESLint va Prettier.
+- Zod yoki teng kuchli validatsiya.
+- Takroriy kodni kamaytirish.
+- Xatolarni markazlashtirilgan boshqarish.
+- Keraksiz dependencylardan qochish.
+
+Mock ma’lumotlar faqat alohida demo rejimida ishlatilishi mumkin. Production rejimida mock ma’lumotlarni haqiqiy natija sifatida ko‘rsatma.
+
+## 29. TESTLASH VA SIFAT NAZORATI
+
+Loyihani tayyor deb hisoblashdan oldin quyidagilarni tekshir:
+
+1. TypeScript tekshiruvi.
+2. ESLint.
+3. Production build.
+4. Asosiy komponentlarning unit testlari.
+5. API validatsiyasi.
+6. Autentifikatsiya.
+7. Rol va ruxsatlar.
+8. Firestore Security Rules.
+9. Darslarni ko‘rish.
+10. Testni topshirish.
+11. Ballarni hisoblash.
+12. O‘yinlarni qayta boshlash.
+13. Til almashtirish.
+14. Yorug‘ va tungi rejim.
+15. Mobil responsivlik.
+16. Qidiruv va filtrlar.
+17. Admin CRUD amallari.
+18. Tarmoq xatolari.
+19. Offline holatlar.
+20. 404 va bo‘sh holatlar.
+21. Accessibility.
+22. Maxfiy ma’lumotlar sizib chiqmasligi.
+23. Vercel deployment konfiguratsiyasi.
+
+Barcha sahifalarda brauzer konsolidagi xatolarni tekshir.
+
+Barcha asosiy tugmalarni amalda bosib ko‘r. Havolalar, formalar va navigatsiya ishlashini tekshir.
+
+Testdan o‘tmagan funksiyani tayyor deb e’lon qilma.
+
+Tashqi xizmatlar konfiguratsiyasiz ishlamasa, bu cheklovni aniq hujjatlashtir.
+
+## 30. GITHUB VA VERCEL DEPLOY
+
+Loyiha GitHub va Vercel uchun tayyor bo‘lsin.
+
+Quyidagilarni yarat:
+- `package.json`
+- Lockfile.
+- `tsconfig.json`
+- `vite.config.ts`
+- `eslint.config.js` yoki mos konfiguratsiya.
+- `README.md`
+- `.gitignore`
+- `.env.example`
+- `vercel.json`, faqat zarur bo‘lsa.
+- Test konfiguratsiyasi.
+- Firebase konfiguratsiyasi uchun namuna.
+- Firestore Security Rules.
+- Zarur indekslar konfiguratsiyasi.
+- Deployment yo‘riqnomasi.
+
+README o‘zbek tilida bo‘lsin va quyidagilarni tushuntirsin:
+1. Loyihani klonlash.
+2. Node.js versiyasi.
+3. Dependencylarni o‘rnatish.
+4. Environment variables sozlash.
+5. Firebase loyihasini ulash.
+6. Firestore yaratish.
+7. Authentication sozlash.
+8. Admin foydalanuvchini xavfsiz yaratish.
+9. Lokal ishga tushirish.
+10. Testlarni bajarish.
+11. Production build.
+12. GitHub’ga push qilish.
+13. Vercel’ga deploy.
+14. Domen ulash.
+15. Xatolarni bartaraf etish.
+
+Maxfiy kalitlarni `.env.example` ichida haqiqiy qiymatlar bilan ko‘rsatma.
+
+Firebase Admin SDK faqat serverda ishlasin. Maxfiy credentiallarni frontendga joylashtirma.
+
+Vercel va Firebase konfiguratsiyasi mosligini tekshir. SPA routing, API endpointlar va server funksiyalarining joylashuvini aniq belgila.
+
+GitHub’ga haqiqiy push yoki Vercel deployment amalga oshirilganini faqat tegishli integratsiya bilan muvaffaqiyatli bajarilgandan keyin ayt. Aks holda foydalanuvchiga bajarish uchun aniq yo‘riqnoma ber.
+
+## 31. KONTENTNI ISHLAB CHIQISH STRATEGIYASI
+
+Barcha 1–11-sinflar uchun minglab sifatli darslarni bir urinishda soxta ma’lumotlar bilan to‘ldirma.
+
+Avval:
+- To‘liq platforma arxitekturasini yarat.
+- Barcha sahifalarni ishlaydigan holatga keltir.
+- Kontent modelini tayyorla.
+- Har bir sinf uchun tekshiriladigan o‘quv xaritasini yarat.
+- Har bir asosiy yo‘nalish uchun sifatli namunaviy darslar tayyorla.
+- Test va o‘yinlar tizimini to‘liq ishlat.
+- Keyin kontentni mavzular bo‘yicha bosqichma-bosqich kengaytir.
+
+Har bir sinf uchun boshlang‘ich kontent paketi quyidagilarga ega bo‘lsin:
+- Mavzular xaritasi.
+- Kamida 3 ta to‘liq, mazmunli namunaviy dars.
+- Har bir dars uchun mashqlar.
+- Tegishli testlar.
+- Kamida bitta mos interaktiv topshiriq.
+- Manbalar.
+- Tarjima holati.
+
+Bu boshlang‘ich to‘plam to‘liq yillik o‘quv dasturi ekanini anglatmasin.
+
+Kontent hajmini sifat hisobiga oshirma. Keyingi darslarni administrator orqali qo‘shish imkonini ta’minla.
+
+## 32. DIZAYNDA YAKUNIY KUTILMA
+
+Sayt ochilganda foydalanuvchi professional, zamonaviy va sifatli ta’lim mahsulotini ko‘rsin.
+
+U quyidagi taassurotni berishi kerak:
+- Minimalistik va toza.
+- Bolalar uchun qiziqarli, lekin haddan tashqari bolalarcha emas.
+- O‘qituvchi uchun jiddiy va amaliy.
+- Ota-ona uchun ishonchli.
+- Mobil qurilmada qulay.
+- Tez yuklanadigan.
+- Oson boshqariladigan.
+- O‘zbekiston ta’lim muhitiga mos.
+- Keyinchalik yangi texnologiyalar bilan kengaytiriladigan.
+
+Oddiy shablon ko‘rinishidagi dashboard bilan cheklanma. Original vizual identitet yarat.
+
+## 33. ISHNI BAJARISH TARTIBI
+
+Ishni quyidagi ketma-ketlikda bajar:
+
+1-bosqich: Talablarni tahlil qilish va texnik arxitektura.
+2-bosqich: Dizayn tizimi va sahifalar tuzilishi.
+3-bosqich: Ishlaydigan frontend.
+4-bosqich: Autentifikatsiya va ma’lumotlar bazasi.
+5-bosqich: Darslar va kontent boshqaruvi.
+6-bosqich: Testlar, mashqlar va o‘yinlar.
+7-bosqich: O‘quvchi, o‘qituvchi va admin kabinetlari.
+8-bosqich: Lokalizatsiya.
+9-bosqich: Xavfsizlik va accessibility.
+10-bosqich: Testlash va xatolarni tuzatish.
+11-bosqich: GitHub va Vercel uchun tayyorlash.
+
+Faqat reja yoki kod namunalari bilan to‘xtama. Haqiqiy loyiha fayllarini yarat va funksiyalarni o‘zaro bog‘la.
+
+Har bir bosqichda mavjud kodni saqla, ishlayotgan funksiyalarni buzma va yangi o‘zgarishlarni tekshir.
+
+Agar bitta urinishda butun loyiha sig‘masa, birinchi navbatda to‘liq ishlaydigan asosiy versiyani yarat. Keyingi bosqichlarda funksiyalarni qo‘sh. Hech qachon ishlamayotgan funksiyani tayyor deb ko‘rsatma.
+
+## 34. QABUL QILISH MEZONLARI
+
+Quyidagi talablar bajarilmaguncha loyihani yakunlangan deb hisoblama:
+
+- Barcha asosiy sahifalar ishlaydi.
+- 1–11-sinflar katalogi mavjud.
+- Darslar ma’lumotlar bazasidan olinadi.
+- Kamida to‘rtta locale ishlaydi.
+- Yorug‘ va tungi rejim ishlaydi.
+- Testlar javoblarni to‘g‘ri baholaydi.
+- O‘yinlar haqiqiy interaktiv.
+- O‘quvchi natijalari to‘g‘ri saqlanadi.
+- Admin CRUD amallari ishlaydi.
+- Ruxsatlar server tomonida tekshiriladi.
+- Maxfiy kalitlar frontendda yo‘q.
+- Mobil dizayn ishlaydi.
+- README to‘liq.
+- `.env.example` mavjud.
+- Production build muvaffaqiyatli.
+- Muhim testlar muvaffaqiyatli.
+- Vercel va Firebase integratsiyasi bo‘yicha ko‘rsatmalar aniq.
+
+Yakunida qisqa texnik hisobot ber:
+- Yaratilgan asosiy funksiyalar.
+- Texnologiyalar.
+- Ishlayotgan va hali sozlanishi kerak bo‘lgan integratsiyalar.
+- Test natijalari.
+- Zarur environment variables.
+- Lokal ishga tushirish buyrug‘i.
+- GitHub va Vercel’ga chiqarish bosqichlari.
+- Aniqlangan cheklovlar.
+
+Eng asosiy talab: RAQAMLI OLAM chiroyli ko‘rinadigan prototip emas, haqiqiy ta’limiy qiymatga ega, xavfsiz, kengaytiriladigan va texnik jihatdan puxta platforma bo‘lsin.
+
+Endi loyiha fayllarini yaratishni boshla. Avval arxitektura va dizaynni belgilab, so‘ng darhol ishlaydigan asosiy versiyani amalga oshir. Har bir muhim funksiyani tekshir va aniqlangan xatolarni tuzat.
